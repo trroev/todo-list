@@ -80,15 +80,15 @@ body {
     line-height: 2.4;
 }
 
-.list-name {
+.project-name {
     cursor: pointer;
 }
 
-.list-name:hover {
+.project-name:hover {
     opacity: 0.7;
 }
 
-.active-list {
+.active-project {
     font-weight: 600;
 }
 
@@ -148,7 +148,7 @@ form {
     opacity: 0.15;
 }
 
-.new.list {
+.new.project {
     font-size: 1rem;
 }
 
@@ -175,7 +175,7 @@ form {
     justify-content: space-between;
 }
 
-.list-title {
+.project-title {
     margin: 0 1rem 0 0;
 }
 
