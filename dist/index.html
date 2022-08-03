@@ -18,64 +18,58 @@
     </div>
     <div class="content">
         <div class="side-bar">
-            <ul class="nav">
-                <li class="list-name active-list"><span class="material-symbols-outlined">checklist</span> All Tasks</li>
-                <li class="list-name"><span class="material-symbols-outlined">
+            <ul class="nav" data-projects>
+                <!-- <li class="project-name active-project"><span class="material-symbols-outlined">checklist</span> All Tasks</li>
+                <li class="project-name"><span class="material-symbols-outlined">
                     today
                     </span> Today</li>
-                <li class="list-name"><span class="material-symbols-outlined">
+                <li class="project-name"><span class="material-symbols-outlined">
                     date_range
                     </span> This Week</li>
-                <li class="list-name"><span class="material-symbols-outlined">
+                <li class="project-name"><span class="material-symbols-outlined">
                     priority_high
-                    </span> Important</li>
+                    </span> Important</li> -->
             </ul>
-            <form action="">
-                <input type="text" class="new list" placeholder="Add Project" aria-label="Add Project">
+            <form action="" data-new-project-form>
+                <input type="text"
+                class="new project"
+                data-new-project-input
+                placeholder="Add Project"
+                aria-label="Add Project">
                 <button class="btn create">+</button>
             </form>
         </div>
-        <div class="main">
+        <div class="main" data-list-main-container>
             <div class="todo-header">
-                <h2 class="list-title">All Tasks</h2>
-                <p class="task-count">3 tasks remaining</p>
+                <h2 class="project-title" data-list-title>All Tasks</h2>
+                <p class="task-count" data-list-count>3 tasks remaining</p>
             </div>
 
             <div class="todo-body">
-                <div class="tasks">
-                    <div class="task">
-                        <input type="checkbox" id="task-1">
-                        <label for="task-1"><span class="custom-checkbox"></span>Workout</label>
-                    </div>
-                </div>
-                <!-- /task-1 -->
-                <div class="tasks">
-                    <div class="task">
-                        <input type="checkbox" id="task-2">
-                        <label for="task-2"><span class="custom-checkbox"></span>Study</label>
-                    </div>
-                </div>
-                <!-- /task-2 -->
-                <div class="tasks">
-                    <div class="task">
-                        <input type="checkbox" id="task-3">
-                        <label for="task-3"><span class="custom-checkbox"></span>Make Dinner</label>
-                    </div>
-                </div>
-                <!-- /task-3 -->
-                
+                <div class="tasks" data-tasks></div>
+
                 <div class="new-task-creator">
-                    <form action="">
-                        <input type="text" class="new task" placeholder="Add Task" aria-label="Add Taskt">
+                    <form action="" data-new-task-form>
+                        <input type="text"
+                        data-new-task-input
+                        class="new task"
+                        placeholder="Add Task"
+                        aria-label="Add Task">
                         <button class="btn create">+</button>
                     </form>
                 </div>
                 <div class="delete-stuff">
-                    <button class="btn delete">Clear Completed Tasks</button>
-                    <button class="btn delete">Clear List</button>
+                    <button class="btn delete" data-clear-complete-tasks-button>Clear Completed Tasks</button>
+                    <button class="btn delete" data-delete-project-button>Delete Project</button>
                 </div>
             </div>
         </div>
     </div>
+    <template id="task-template">
+        <div class="task">
+            <input type="checkbox">
+            <label><span class="custom-checkbox"></span></label>
+        </div>
+    </template>
 </body>
 </html>
